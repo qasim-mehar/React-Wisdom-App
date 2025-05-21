@@ -1,4 +1,6 @@
-import { useState, useEffect} from 'react'
+import { useState,useEffect } from 'react'
+
+import './App.css'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,19 +17,39 @@ function App() {
 
   return (
     <> 
-      <div className="advice">
-        <h2>{advice}</h2>
-        <button onClick={getAdvice}>Click for advice</button>
-        <Message count={count} />
-      </div> 
+    <div class="container mx-auto max-w-2xl">
+        <div class="advice-card bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-2xl border border-white/20">
+            <div class="text-center mb-6">
+                <h1 class="text-2xl font-bold text-white mb-2">✨ Wisdom Generator ✨</h1>
+                <p class="text-white/80">Get personalized advice for your daily life</p>
+            </div>
+            
+            <div class="advice-container min-h-40 flex items-center justify-center mb-8">
+                <p id="advice" class="advice-text text-white text-xl md:text-2xl font-medium text-center px-4 py-6 transition-all duration-300">{advice}</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+                <button onClick={getAdvice} id="adviceBtn" class="btn-advice pulse bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-full flex items-center gap-2">
+                    <i class="fas fa-lightbulb"></i>
+                    Generate Advice
+                </button>
+                
+                <Message count={count}/>
+            </div>
+        </div>
+    </div>
+
+      
     </>
   )
 }
 function Message(props){
   return(
-      <h3>you have seen <strong>{props.count}</strong> advices</h3>
+      <div id="message" class="count-badge mt-6 bg-black/20 text-white/90 px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                    <i class="fas fa-chart-line"></i>
+                    <span id="count">{props.count}</span> pieces of wisdom generated
+                </div>
   )
  
 }
-
 export default App
