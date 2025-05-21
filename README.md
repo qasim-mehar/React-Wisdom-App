@@ -50,4 +50,4 @@ useEffect(() => {
 }, []); // Empty dependency array = run once
 ```
 <br>
-<p align="center"> Made with ❤️ using React <br> <br> <a href="https://github.com/yourusername/wisdom-wizard"> <img src="https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github"> </a> </p> 
+<p align="center"> Made with ❤️ by Qasim Ali. <br> <br> <a href="https://github.com/yourusername/wisdom-wizard"> <img src="https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github"> </a> </p> 
