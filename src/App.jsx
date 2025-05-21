@@ -9,8 +9,18 @@ function App() {
       setAdvice(data.slip.advice);
       setCount((c) => c + 1);
     }
+   
 
-  }
+  return (
+    <> 
+      <div className="advice">
+        <h2>{advice}</h2>
+        <button onClick={getAdvice}>Click for advice</button>
+        <Message count={count} />
+      </div> 
+    </>
+  )
+}
 
 
 export default App
