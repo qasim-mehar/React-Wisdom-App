@@ -23,6 +23,11 @@ function App() {
     </>
   )
 }
-
+function Message(props){
+  return(
+      <h3>you have seen <strong>{props.count}</strong> advices</h3>
+  )
+ 
+}
 
 export default App
